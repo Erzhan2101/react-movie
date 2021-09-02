@@ -23,3 +23,13 @@
 .btnPage{
     padding: 4px 12px;
 }
+
+.info-grid{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.actors{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}

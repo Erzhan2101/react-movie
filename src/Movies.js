@@ -16,7 +16,6 @@ const Movies = () => {
         TheFilms()
     }, [page])
 
-
     const handlePage = (num) => {
         setPage(num)
     }
@@ -25,7 +24,7 @@ const Movies = () => {
         <div>
             <div className="btn-movie-grid">
                 {
-                    Array(3).fill(0).map((el, idx) =>
+                    Array(6).fill(0).map((el, idx) =>
                         <div>
                             <button className='btnPage' onClick={() => handlePage(idx + 1)}>{idx + 1}</button>
                         </div>
@@ -36,9 +35,9 @@ const Movies = () => {
                 {
                     films.map(el => (
                         <div key={el.id}>
-                            <Link to={`/movie-info/${el.title}`}>
-                                <div>{el.title}</div>
+                            <Link to={`/movie-info/${el.id}`}>
                                 <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${el.poster_path}`} alt=""/>
+                                <div>{el.title}</div>
                             </Link>
                         </div>
 
