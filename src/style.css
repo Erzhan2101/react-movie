@@ -20,6 +20,8 @@ p{
     margin-right: 10px;
     font-size: 20px;
     margin-bottom: unset;
+    font-family: 'Bebas Neue', cursive;
+
 }
 
 .p{
@@ -50,6 +52,7 @@ p{
     padding: 4px;
     transition: .3s;
     color: #225fb3;
+    width: 23%;
 }
 
 
@@ -66,10 +69,11 @@ p{
 
 .btn-movie-grid {
     display: flex;
+    margin:20px 10px;
 }
 
 .grid {
-    margin-top: 40px;
+    margin-top: 15px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
@@ -81,10 +85,7 @@ p{
 
 
 
-.actors {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
+
 
 .img-movies {
     border-radius: 10px;
@@ -111,16 +112,26 @@ p{
     font-family: 'Bebas Neue', cursive;
 }
 
+
 /*===========Movie Info============*/
 
 .info-grid {
     display: grid;
     grid-template-columns: 30% 70%;
-    padding: 20px;
+    padding: 20px 0;
+}
+
+.info-grid img{
+    border-radius: 10px;
+    box-shadow: 1px 1px 16px 5px rgba(111, 111, 111, 0.39);
 }
 
 .info{
     background-color: black;
+    margin-top: 45px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 16px 5px #6f6f6f;
+    padding: 15px;
 }
 
 .info-title{
@@ -134,4 +145,50 @@ p{
     margin-top: 7px;
     color: #ffffff;
     font-family: 'Bebas Neue', cursive;
+}
+
+.info-description span {
+    color: #0a58ca;
+}
+
+.info-rating span{
+    color: #0a58ca;
+}
+
+.info-release span{
+    color: #0a58ca;
+}
+
+.actors {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    transition: .3s;
+}
+
+.actor-box{
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    transition: .2s;
+}
+
+.actor-box:hover{
+    box-shadow: 1px 1px 16px 5px rgba(111, 111, 111, 0.39);
+}
+
+.actors img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.info-language span{
+    color: #0a58ca;
+}
+
+.actor-name{
+    padding: 0 10px;
+}
+
+.actor-character{
+    padding: 0 10px;
 }

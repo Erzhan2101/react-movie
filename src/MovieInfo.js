@@ -18,23 +18,31 @@ const MovieInfo = () => {
 
     }, [id])
 
+
     return (
         <div className="info">
             <div className='info-grid'>
                 <img src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${info.poster_path}`} alt=""/>
                 <div>
                     <h2 className="info-title">{info.title}</h2>
-                    <h4 className="info-description">Description: {info.overview}</h4>
-                    <p></p>
+                    <h4 className="info-description"><span>Description:</span> {info.overview}</h4>
+                    <div>
+                        <p className="info-rating"><span>Rating:  </span>{info.vote_average}</p>
+                        <p className="info-release"><span>Release date:  </span> {info.release_date}</p>
+                        <p className="info-language"><span>Language:  </span>{info.original_language}</p>
+
+
+                    </div>
+
                 </div>
             </div>
             <div className="actors">
                 {
                     actors.filter(item => item.popularity > 5).map(el =>
-                        <div>
+                        <div className="actor-box">
                             <img src={`https://image.tmdb.org/t/p/w200${el.profile_path}`} alt=""/>
-                            <h4>{el.name}</h4>
-                            <p>{el.character}</p>
+                            <h4 className="info-description actor-name">{el.name}</h4>
+                            <p className="actor-character">{el.character}</p>
                         </div>
                     )
                 }
