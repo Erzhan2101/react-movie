@@ -26,7 +26,7 @@ const Movies = () => {
                 {
                     Array(6).fill(0).map((el, idx) =>
                         <div>
-                            <button className='btnPage' onClick={() => handlePage(idx + 1)}>{idx + 1}</button>
+                            <button className='btnPage btn ml-2 btn-primary' onClick={() => handlePage(idx + 1)}>{idx + 1}</button>
                         </div>
                     )
                 }
@@ -40,7 +40,6 @@ const Movies = () => {
                                 <div>{el.title}</div>
                             </Link>
                         </div>
-
                     ))
                 }
             </div>

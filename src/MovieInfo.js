@@ -6,6 +6,7 @@ const MovieInfo = () => {
     const [info, setInfo] = useState({})
     const [actors, setActors] = useState([])
     const {id} = useParams()
+
     useEffect(() => {
         axios(`https://api.themoviedb.org/3/movie/${id}?&language=ru&api_key=87ddbf572d37c8c9ab2b83fd928c482c`)
             .then(({data}) => setInfo(data))
@@ -15,7 +16,7 @@ const MovieInfo = () => {
         axios(`https://api.themoviedb.org/3/movie/${id}/credits?&language=ru&api_key=6f19f87e3380315b9573c4270bfc863c`)
             .then(({data}) => setActors(data.cast))
 
-    }, [])
+    }, [id])
 
     return (
         <div>
@@ -28,7 +29,7 @@ const MovieInfo = () => {
             </div>
             <div className="actors">
                 {
-                    actors.filter(item => item.popularity > 5).map(el =>
+                    actors.map(el =>
                         <div>
                             <img src={`https://image.tmdb.org/t/p/w200${el.profile_path}`} alt=""/>
                             <h4>{el.name}</h4>
