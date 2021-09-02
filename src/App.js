@@ -11,7 +11,6 @@ function App() {
         <div className="container mb-3">
             <Header />
             <Router>
-
                 <Route exact path='/'><Movies /></Route>
                 <Route path='/movie-info/:id'><MovieInfo/></Route>
             </Router>

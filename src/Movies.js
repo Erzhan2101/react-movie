@@ -10,7 +10,7 @@ const Movies = () => {
 
     useEffect(() => {
         async function TheFilms() {
-            const {data: {results}} = await axios(`https://api.themoviedb.org/3/discover/movie?page=${page}&language=ru&api_key=87ddbf572d37c8c9ab2b83fd928c482c`)
+            const {data: {results}} = await axios(`https://api.themoviedb.org/3/discover/movie?page=${page}&language=en&api_key=87ddbf572d37c8c9ab2b83fd928c482c`)
             setFilms(results)
         }
         TheFilms()
@@ -21,12 +21,12 @@ const Movies = () => {
     }
 
     return (
-        <div>
+        <div className="movies">
             <div className="btn-movie-grid">
                 {
                     Array(6).fill(0).map((el, idx) =>
                         <div>
-                            <button className='btnPage btn ml-2 btn-primary' onClick={() => handlePage(idx + 1)}>{idx + 1}</button>
+                            <button className={`btnPage btn btn-primary mx-1 ${page === idx + 1 && "btn-success"}`} onClick={() => handlePage(idx + 1)}>{idx + 1}</button>
                         </div>
                     )
                 }
@@ -34,11 +34,11 @@ const Movies = () => {
             <div className="grid">
                 {
                     films.map(el => (
-                        <div key={el.id}>
-                            <Link to={`/movie-info/${el.id}`}>
-                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${el.poster_path}`} alt=""/>
-                                <div>{el.title}</div>
-                            </Link>
+                        <div className="box" key={el.id}>
+                            <Link  to={`/movie-info/${el.id}`}>
+                                <img className="img-movies" src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${el.poster_path}`} alt=""/>
+                                <p className="title-movies">{el.title}</p>
+                            </Link >
                         </div>
                     ))
                 }
