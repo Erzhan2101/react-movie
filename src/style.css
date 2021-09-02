@@ -14,6 +14,10 @@ a {
     text-decoration: none;
 }
 
+.inLoading{
+    color: #0a58ca;
+}
+
 /*=======Header=========*/
 p{
     color: white;
@@ -191,4 +195,12 @@ p{
 
 .actor-character{
     padding: 0 10px;
+}
+
+.info-budget span{
+    color: #0a58ca;
+}
+
+.info-revenue span{
+    color: #0a58ca;
 }

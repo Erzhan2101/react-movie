@@ -7,11 +7,14 @@ const Movies = () => {
 
     const [page, setPage] = useState(1)
     const [films, setFilms] = useState([])
+    const [inLoading, setIsLoading] = useState(true)
+
 
     useEffect(() => {
         async function TheFilms() {
             const {data: {results}} = await axios(`https://api.themoviedb.org/3/discover/movie?page=${page}&language=en&api_key=87ddbf572d37c8c9ab2b83fd928c482c`)
             setFilms(results)
+            setIsLoading(false)
         }
         TheFilms()
     }, [page])
@@ -20,6 +23,9 @@ const Movies = () => {
         setPage(num)
     }
 
+    if (inLoading) {
+        return <h1 className="inLoading">Loading....</h1>
+    }
     return (
         <div className="movies">
             <div className="btn-movie-grid">
