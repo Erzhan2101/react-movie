@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {useHistory, useParams} from 'react-router-dom'
+import {Link, useHistory, useParams} from 'react-router-dom'
 
 const MovieInfo = () => {
     const [info, setInfo] = useState({})
@@ -27,6 +27,10 @@ const MovieInfo = () => {
 
     }, [id])
 
+    const btnFarther = () => {
+        history.push(`/actors/${id}`)
+    }
+
     if (inLoading) {
         return <h1 className="inLoading">Loading....</h1>
     }
@@ -52,15 +56,18 @@ const MovieInfo = () => {
             </div>
             <div className="actors">
                 {
-                    actors.filter(item => item.popularity > 5).map(el =>
+                    actors.slice(actors, 10).map(el =>
                         <div className="actor-box">
-                            <img src={`https://image.tmdb.org/t/p/w200${el.profile_path}`} alt=""/>
-                            <h4 className="info-description actor-name">{el.name}</h4>
-                            <p className="actor-character">{el.character}</p>
+                            <Link to={`/actor-info/${el.id}`}>
+                                <img src={`https://image.tmdb.org/t/p/w200${el.profile_path}`} alt=""/>
+                                <h4 className="info-description actor-name">{el.name}</h4>
+                                <p className="actor-character">{el.character}</p>
+                            </Link>
                         </div>
                     )
                 }
             </div>
+            <button onClick={btnFarther}>farther...</button>
         </div>
     )
 }
