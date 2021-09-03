@@ -7,6 +7,7 @@
 }
 
 body {
+
     background: url("https://cdn.freelance.ru/img/portfolio/pics/00/23/76/2324154.jpg?mt=3c297165");
 }
 
@@ -16,6 +17,20 @@ a {
 
 .inLoading{
     color: #0a58ca;
+}
+
+.back{
+    background-color: #225fb3;
+    color: white;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    transition: .4s;
+}
+
+.back:hover{
+    color: #ffffff;
+    background-color: #6686b6;
 }
 
 /*=======Header=========*/
@@ -32,7 +47,6 @@ p{
     display: flex;
     transition: .3s;
 }
-
 
 .header {
     border-radius: 10px;
@@ -58,8 +72,6 @@ p{
     color: #225fb3;
     width: 23%;
 }
-
-
 /*========Movies========*/
 
 .movies {
@@ -69,7 +81,6 @@ p{
     box-shadow: 1px 1px 16px 5px #6f6f6f;
     padding: 15px;
 }
-
 
 .btn-movie-grid {
     display: flex;
@@ -86,10 +97,6 @@ p{
     padding: 2px 17px;
     margin: 20px 15px;
 }
-
-
-
-
 
 .img-movies {
     border-radius: 10px;
@@ -115,7 +122,6 @@ p{
     color: #ffffff;
     font-family: 'Bebas Neue', cursive;
 }
-
 
 /*===========Movie Info============*/
 

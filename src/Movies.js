@@ -32,7 +32,7 @@ const Movies = () => {
                 {
                     Array(6).fill(0).map((el, idx) =>
                         <div>
-                            <button className={`btnPage btn btn-primary mx-1 ${page === idx + 1 && "btn-success"}`} onClick={() => handlePage(idx + 1)}>{idx + 1}</button>
+                            <button key={el.id} className={`btnPage btn btn-primary mx-1 ${page === idx + 1 && "btn-success"}`} onClick={() => handlePage(idx + 1)}>{idx + 1}</button>
                         </div>
                     )
                 }
