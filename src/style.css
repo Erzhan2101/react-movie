@@ -219,6 +219,21 @@ p{
     color: #0a58ca;
 }
 
+.look-beyond{
+    margin-left: 20px;
+    margin-top: 90px;
+    border:4px solid #225fb3;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    color: #225fb3;
+    background: transparent;
+    transition: .2s;
+}
+.look-beyond:hover{
+    box-shadow: 1px 1px 16px 5px rgba(111, 111, 111, 0.79);
+}
+
 /*======= Actor =====*/
 
 .details-actor{

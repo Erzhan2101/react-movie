@@ -66,8 +66,8 @@ const MovieInfo = () => {
                         </div>
                     )
                 }
+                <button className="look-beyond" onClick={btnFarther}>look beyond →</button>
             </div>
-            <button onClick={btnFarther}>farther...</button>
         </div>
     )
 }
