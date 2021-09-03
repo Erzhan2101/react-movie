@@ -24,7 +24,7 @@ const Actors = () => {
     return (
         <div className="all-actors">
             <div>
-                <button className="back" onClick={() => history.goBack()}>Back</button>
+                <button className="back all-actors-back" onClick={() => history.goBack()}>Back</button>
             </div>
             <div className="actors ">
                 {

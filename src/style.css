@@ -5,7 +5,7 @@ div{
 }
 
 .user-unk{
-    margin-bottom: 95px;
+    margin: 47px 0;
 }
 
 * {
@@ -277,4 +277,8 @@ p{
     border-radius: 10px;
     box-shadow: 1px 1px 16px 5px #6f6f6f;
     padding: 15px;
+}
+
+.all-actors-back{
+    margin-left: 10px;
 }
