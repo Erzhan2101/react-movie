@@ -35,8 +35,6 @@ const MovieInfo = () => {
         history.push(`/actors/${id}`)
     }
 
-    const genre = info.genres
-
     if (inLoading && actorsLoading) {
         return <h1 className="inLoading">Loading....</h1>
     }
