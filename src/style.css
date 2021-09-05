@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-div{
+div {
     color: white;
 }
 
-.user-unk{
-    margin: 47px 0;
+.user-unk {
+    width: 260%;
+    margin: 2px 0 68px;
 }
 
 * {
@@ -23,11 +24,11 @@ a {
     text-decoration: none;
 }
 
-.inLoading{
+.inLoading {
     color: #0a58ca;
 }
 
-.back{
+.back {
     background-color: #225fb3;
     color: white;
     width: 100px;
@@ -36,22 +37,22 @@ a {
     transition: .4s;
 }
 
-.back:hover{
+.back:hover {
     color: #ffffff;
     background-color: #6686b6;
 }
 
 /*=======Header=========*/
-p{
+p {
     color: white;
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 17px;
     margin-bottom: unset;
     font-family: 'Bebas Neue', cursive;
 
 }
 
-.p{
+.p {
     display: flex;
     transition: .3s;
 }
@@ -66,11 +67,11 @@ p{
     transition: .3s;
 }
 
-.header:hover{
+.header:hover {
     box-shadow: 1px 1px 16px 5px rgba(10, 88, 202, 0.34);
 }
 
-.logo-title{
+.logo-title {
 
     border: 4px solid #225fb3;
     border-radius: 5px;
@@ -80,6 +81,7 @@ p{
     color: #225fb3;
     width: 23%;
 }
+
 /*========Movies========*/
 
 .movies {
@@ -92,7 +94,7 @@ p{
 
 .btn-movie-grid {
     display: flex;
-    margin:20px 10px;
+    margin: 20px 10px;
 }
 
 .grid {
@@ -139,12 +141,12 @@ p{
     padding: 20px 0;
 }
 
-.info-grid img{
+.info-grid img {
     border-radius: 10px;
     box-shadow: 1px 1px 16px 5px rgba(111, 111, 111, 0.39);
 }
 
-.info{
+.info {
     background-color: black;
     margin-top: 45px;
     border-radius: 10px;
@@ -152,91 +154,92 @@ p{
     padding: 15px;
 }
 
-.info-title{
+.info-title {
     font-size: 40px;
     margin-top: 7px;
     color: #ffffff;
     font-family: 'Bebas Neue', cursive;
 }
 
-.info-description{
+.info-description-span {
     margin-top: 7px;
     color: #ffffff;
     font-family: 'Bebas Neue', cursive;
 }
 
-.info-description span {
+.all-info-description {
+    margin-top: 7px;
+    color: #ffffff;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    width: 220%;
+}
+
+.info-description-span span {
     color: #0a58ca;
 }
 
-.info-rating span{
+.info-rating span {
     color: #0a58ca;
 }
 
-.info-release span{
+.info-release span {
     color: #0a58ca;
 }
 
-.actors {
+.actors-all {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     transition: .3s;
 }
 
-.actor-box{
-    border-radius: 10px;
-    border: 1px solid black;
-    margin: 10px;
-    transition: .2s;
-}
 
-.actor-box:hover{
-    box-shadow: 1px 1px 16px 5px rgba(111, 111, 111, 0.39);
-}
-
-.actors img{
-    border-radius: 10px;
-    width: 100%;
-}
-
-.info-language span{
+.info-language span {
     color: #0a58ca;
 }
 
-.actor-name{
-    padding: 0 10px;
+.img-movies-user {
+    margin: 20px 0 118px;
 }
 
-.actor-character{
-    padding: 0 10px;
-}
-
-.info-budget span{
+.info-budget span {
     color: #0a58ca;
 }
 
-.info-revenue span{
+.info-revenue span {
     color: #0a58ca;
 }
 
-.look-beyond{
+.look-beyond {
     margin-left: 20px;
-    margin-top: 90px;
-    border:4px solid #225fb3;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
+    margin-top: 240px;
     color: #225fb3;
     background: transparent;
-    transition: .2s;
+    border: none;
+    font-size: 20px;
 }
-.look-beyond:hover{
-    box-shadow: 1px 1px 16px 5px rgba(111, 111, 111, 0.79);
-}
+
+
 
 /*======= Actor =====*/
+.actor-name{
+    text-align: center;
+    margin-top: 7px;
+    color: #ffffff;
+    font-family: 'Bebas Neue', cursive;
+}
 
-.details-actor{
+.actor-character {
+    text-align: center;
+}
+
+.all-actor-character {
+    width: 110%;
+    text-align: center;
+    margin-left: 56px;
+}
+
+.details-actor {
     background-color: black;
     margin-top: 45px;
     border-radius: 10px;
@@ -244,34 +247,34 @@ p{
     padding: 15px;
 }
 
-.details-actor img{
+.details-actor img {
     border-radius: 10px;
     box-shadow: 1px 1px 16px 5px rgba(111, 111, 111, 0.39);
 }
 
-.details-actor-biography{
+.details-actor-biography {
     text-align: justify;
 }
 
-.details-actor-biography span{
+.details-actor-biography span {
     color: #225fb3;
 }
 
-.details-actor-biography span{
+.details-actor-biography span {
     color: #225fb3;
 }
 
-.details-actor-birthday span{
+.details-actor-birthday span {
     color: #225fb3;
 }
 
-.details-actor-birth span{
+.details-actor-birth span {
     color: #225fb3;
 }
 
 /*========all-actors==========*/
 
-.all-actors{
+.all-actors {
     background-color: black;
     margin-top: 45px;
     border-radius: 10px;
@@ -279,6 +282,30 @@ p{
     padding: 15px;
 }
 
-.all-actors-back{
-    margin-left: 10px;
+.all-actor-box {
+    width: 100px;
+    padding: 20px 0;
+}
+
+
+.all-actor-info {
+    width: 10%;
+}
+
+
+.all-actor-img {
+    width: 260px;
+    border-radius: 10px;
+}
+
+.info-genre{
+    display: flex;
+}
+
+.info-genre div{
+    margin:0 10px;
+}
+
+.info-genre span{
+    color: #225fb3;
 }

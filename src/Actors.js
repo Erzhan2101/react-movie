@@ -24,16 +24,25 @@ const Actors = () => {
     return (
         <div className="all-actors">
             <div>
-                <button className="back all-actors-back" onClick={() => history.goBack()}>Back</button>
+                <button className="back " onClick={() => history.goBack()}>Back</button>
             </div>
-            <div className="actors ">
+            <div className="actors-all ">
                 {
                     actors.map(el =>
-                        <div className="actor-box">
+                        <div className="all-actor-box">
                             <Link to={`/actor-info/${el.id}`}>
-                                {(el.profile_path === null) ? <img className="user-unk" src="https://o.remove.bg/downloads/da7c58de-f7d3-4f1b-a245-05652b8f157c/avatar-Tonny-Regensburg-removebg-preview.png" alt=""/> : <img src={`https://image.tmdb.org/t/p/w200${el.profile_path}`} alt=""/>}
-                                <h4 className="info-description actor-name">{el.name}</h4>
-                                <p className="actor-character">{el.character}</p>
+                                {
+                                    el.profile_path === null ?
+                                        <img
+                                            src="https://o.remove.bg/downloads/e8ade73f-2117-4dcb-9c56-cf552cbf6c4a/default-user-image-removebg-preview.png"
+                                            alt="" className='user-unk'/>
+                                        :
+                                        <img
+                                            src={`https://www.themoviedb.org/t/p/w276_and_h350_face/${el.profile_path}`}
+                                            alt="" className='all-actor-img'/>
+                                }
+                                <h4 className="all-info-description ">{el.name}</h4>
+                                <p className="all-actor-character">{el.character}</p>
                             </Link>
                         </div>
                     )
