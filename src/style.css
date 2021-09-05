@@ -309,3 +309,12 @@ p {
 .info-genre span{
     color: #225fb3;
 }
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.info-film-duration span{
+    color: #225fb3;
+}
