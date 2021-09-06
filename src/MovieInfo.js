@@ -24,7 +24,7 @@ const MovieInfo = () => {
             })
 
 
-        axios(`http://api.themoviedb.org/3/movie/${id}/videos?&language=ru&api_key=6f19f87e3380315b9573c4270bfc863c`)
+        axios(`http://api.themoviedb.org/3/movie/${id}/videos?&language=en&api_key=6f19f87e3380315b9573c4270bfc863c`)
             .then(({data}) => setTrailers(data.results))
 
 
