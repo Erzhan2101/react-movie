@@ -4,10 +4,13 @@ import {Link, useHistory, useParams} from 'react-router-dom'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import Fancy from "./Fancy";
 
 const MovieInfo = () => {
     const [info, setInfo] = useState({})
     const [actors, setActors] = useState([])
+    const [trailers, setTrailers] = useState([])
+
     const [inLoading, setIsLoading] = useState(true)
     const [actorsLoading, setActorsLoading] = useState(true)
     const history = useHistory();
@@ -20,9 +23,11 @@ const MovieInfo = () => {
                 setIsLoading(false)
             })
 
-    }, [id])
 
-    useEffect(() => {
+        axios(`http://api.themoviedb.org/3/movie/${id}/videos?&language=ru&api_key=6f19f87e3380315b9573c4270bfc863c`)
+            .then(({data}) => setTrailers(data.results))
+
+
         axios(`https://api.themoviedb.org/3/movie/${id}/credits?&language=en&api_key=6f19f87e3380315b9573c4270bfc863c`)
             .then(({data}) => {
                 setActors(data.cast)
@@ -62,16 +67,25 @@ const MovieInfo = () => {
 
                             </p>
                             <p className="info-film-duration">
-                               <span>Film duration: </span> {Math.floor(info.runtime / 60)} hour {Math.floor(info.runtime % 60)} minutes
+                                <span>Film duration: </span> {Math.floor(info.runtime / 60)} hour {Math.floor(info.runtime % 60)} minutes
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            {
+                trailers.map(item =>
+                    <Fancy id={item.key} key={item.id}/>
+                )
+            }
+
+
             <div className="actors">
+                <h4 className="actors-desc">Starred in the film</h4>
                 <OwlCarousel className='owl-theme' margin={10} items={4}>
                     {
-                        actors.slice(actors, 13).map(el =>
+                        actors.slice(actors, 10).map(el =>
                             <div className="actor-box">
                                 <Link to={`/actor-info/${el.id}`}>
                                     {

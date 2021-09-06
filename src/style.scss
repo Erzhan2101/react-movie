@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import './node_modules/react-modal-video/scss/modal-video.scss';
 
 div {
     color: white;
@@ -317,4 +318,15 @@ p {
 
 .info-film-duration span{
     color: #225fb3;
+}
+
+.actors-desc{
+    text-align: center;
+    margin-top: 7px;
+    color: #ffffff;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.modal-video-movie-wrap{
+    padding: unset;
 }
