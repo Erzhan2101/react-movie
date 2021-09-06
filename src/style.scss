@@ -72,6 +72,25 @@ p {
   box-shadow: 1px 1px 16px 5px rgba(10, 88, 202, 0.34);
 }
 
+.search-input{
+  padding-left: 10px;
+  height: 25px;
+  border-radius: 10px 0 0 10px;
+  font-size: 17px;
+  font-family: 'Bebas Neue', cursive;
+  border: none;
+}
+
+.search-btn{
+  background-color: white;
+  border: none;
+  height: 25px;
+  border-radius: 0 10px 10px 0;
+  font-size: 17px;
+  font-family: 'Bebas Neue', cursive;
+  padding: 2px 2px 0 0 ;
+}
+
 .logo-title {
 
   border: 4px solid #225fb3;

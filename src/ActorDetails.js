@@ -41,7 +41,7 @@ const ActorInfo = () => {
                         {
                             filmsList.filter(item => item.release_date).sort((a, b) => new Date(b.release_date) - new Date(a.release_date)).map(el =>
                                 <div key={el.id} >
-                                    <p className="acting-art-details"><span>{el.release_date.slice(0, 4) } ----- </span>{el.title}  <span className="acting-art-det">filmed as</span> {el.character}</p>
+                                    <p className="acting-art-details">{el.release_date.slice(0, 4) }<span> ----- </span>{el.title}  <span className="acting-art-det">filmed as</span> {el.character}</p>
                                 </div>
                             )
                         }
