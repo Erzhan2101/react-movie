@@ -3,22 +3,25 @@ import {Link, useHistory} from "react-router-dom";
 
 const Header = () => {
 
-    const [search, setSearch] = useState('')
+    const [textSearch, setTextSearch] = useState('')
     const history = useHistory();
 
     const searchInput = (e) => {
-        setSearch(e.target.value)
+        setTextSearch(e.target.value)
     }
 
     const btnSearch = () => {
-        if (search.trim()) {
-            history.push(`browse/${search}`)
+        if (textSearch.trim()) {
+            history.push(`browse/${textSearch}`)
         }
     }
 
     return (
         <header className="container header">
-                <p className="logo-title">watch with soul</p>
+            <Link className="logo-title" to ={`/`}>
+                watch with soul
+            </Link>
+
             <div className="p">
                 <p>Home</p>
                 <p>Films</p>

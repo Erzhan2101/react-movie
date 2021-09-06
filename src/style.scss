@@ -17,12 +17,14 @@ div {
 }
 
 body {
+  position: relative;
   //background-color: #212020;
   background: url("https://cdn.freelance.ru/img/portfolio/pics/00/23/76/2324154.jpg?mt=3c297165");
 }
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 .inLoading {
@@ -72,7 +74,7 @@ p {
   box-shadow: 1px 1px 16px 5px rgba(10, 88, 202, 0.34);
 }
 
-.search-input{
+.search-input {
   padding-left: 10px;
   height: 25px;
   border-radius: 10px 0 0 10px;
@@ -81,14 +83,14 @@ p {
   border: none;
 }
 
-.search-btn{
+.search-btn {
   background-color: white;
   border: none;
   height: 25px;
   border-radius: 0 10px 10px 0;
   font-size: 17px;
   font-family: 'Bebas Neue', cursive;
-  padding: 2px 2px 0 0 ;
+  padding: 2px 2px 0 0;
 }
 
 .logo-title {
@@ -192,7 +194,14 @@ p {
   color: #ffffff;
   font-family: 'Bebas Neue', cursive;
   text-align: center;
-  width: 250%;
+  //width: 250%;
+}
+
+.notable-for {
+  margin-top: 20px;
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+  color: #0a58ca;
 }
 
 .info-description-span span {
@@ -253,9 +262,9 @@ p {
 }
 
 .all-actor-character {
-  width: 110%;
+  //width: 110%;
   text-align: center;
-  margin-left: 56px;
+  //margin-left: 56px;
 }
 
 .details-actor {
@@ -390,4 +399,21 @@ p {
 
 .modal-video-movie-wrap {
   padding: unset;
+}
+
+.btn-up {
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  padding: 8px;
+  color: white;
+  border-radius: 10px 10px;
+  background-color: #225fb3;
+  transition: .4s;
+  border: none;
+}
+
+.btn-up:hover {
+  padding: 10px;
+  background-color: #0a58ca;
 }

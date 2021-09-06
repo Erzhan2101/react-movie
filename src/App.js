@@ -6,18 +6,19 @@ import ActorInfo from "./ActorDetails";
 
 import {BrowserRouter as Router, Route} from "react-router-dom"
 import Actors from "./Actors";
-
+import BtnUp from "./BtnUp";
 function App() {
 
     return (
 
         <div className="container mb-3">
-            <Header />
             <Router>
+                <Header />
                 <Route exact path='/'><Movies /></Route>
                 <Route path='/movie-info/:id'><MovieInfo/></Route>
                 <Route path='/actor-info/:id'><ActorInfo/></Route>
                 <Route path='/actors/:id'><Actors/></Route>
+                <BtnUp />
             </Router>
         </div>
 
