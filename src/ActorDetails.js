@@ -37,7 +37,10 @@ const ActorInfo = () => {
 
 
     if (inLoading && actorsLoading) {
-        return <h1 className="inLoading">Loading....</h1>
+        return <div className="spinner-loading ">
+            <img className="inLoading" alt="" src="https://icon-library.com/images/windows-10-loading-icon/windows-10-loading-icon-19.jpg"/>
+        </div>
+
     }
     return (
         <div className='details-actor'>
@@ -58,7 +61,7 @@ const ActorInfo = () => {
                     <h3 className="actor-details-name-hero">{actor.name}</h3>
                     <p className="details-actor-biography"><span>Biography: </span> {actor.biography}</p>
                     <h4 className="notable-for">Notable for</h4>
-                    <OwlCarousel className='owl-theme' margin={10} items={4}  dots={false} >
+                    <OwlCarousel className='owl-theme' margin={10} items={4}  dots={false} nav>
                     {
                         actorFilms.map(el =>
                         <Link to={`/movie-info/${el.id}`}>

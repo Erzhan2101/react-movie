@@ -5,6 +5,25 @@ div {
   color: white;
 }
 
+
+.spinner-loading {
+  box-shadow: 1px 1px 16px 5px #6f6f6f;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.grid-3{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .user-unk {
   width: 260%;
   margin: 2px 0 68px;
@@ -28,7 +47,8 @@ a {
 }
 
 .inLoading {
-  color: #0a58ca;
+  width: 40%;
+  margin: 110px;
 }
 
 .back {
@@ -94,7 +114,7 @@ p {
 }
 
 .logo-title {
-
+  font-family: 'Bebas Neue', cursive;
   border: 4px solid #225fb3;
   border-radius: 5px;
   text-align: center;
@@ -401,19 +421,31 @@ p {
   padding: unset;
 }
 
+.owl-carousel .owl-nav button.owl-next, button.owl-prev {
+  font-size: 45px;
+  margin-left: 40px;
+}
+
+
+.owl-carousel .owl-nav button.owl-prev {
+  font-size: 45px;
+}
+
 .btn-up {
   position: fixed;
   bottom: 50px;
-  right: 40px;
-  padding: 8px;
-  color: white;
+  right: 28px;
+  height: 60px;
+  width: 60px;
+  color: #c4bfbf;
   border-radius: 10px 10px;
-  background-color: #225fb3;
-  transition: .4s;
+  background-color: #0a58ca;
+  transition: .2s;
   border: none;
 }
 
 .btn-up:hover {
-  padding: 10px;
+  font-size: 30px;
   background-color: #0a58ca;
+  color: white;
 }

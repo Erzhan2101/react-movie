@@ -19,7 +19,9 @@ const Actors = () => {
     }, [id])
 
     if (inLoading) {
-        return <h1 className="inLoading">Loading....</h1>
+        return <div className="spinner-loading ">
+            <img className="inLoading" alt="" src="https://icon-library.com/images/windows-10-loading-icon/windows-10-loading-icon-19.jpg"/>
+        </div>
     }
     return (
         <div className="all-actors">
