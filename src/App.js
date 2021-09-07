@@ -2,13 +2,15 @@ import Movies from "./Movies";
 import MovieInfo from "./MovieInfo";
 import Header from "./Header";
 import ActorInfo from "./ActorDetails";
-
+import Search from "./Search";
 
 import {BrowserRouter as Router, Route} from "react-router-dom"
 import Actors from "./Actors";
 import BtnUp from "./BtnUp";
 function App() {
 
+
+    //87ddbf572d37c8c9ab2b83fd928c482c
     return (
 
         <div className="container mb-3">
@@ -18,6 +20,7 @@ function App() {
                 <Route path='/movie-info/:id'><MovieInfo/></Route>
                 <Route path='/actor-info/:id'><ActorInfo/></Route>
                 <Route path='/actors/:id'><Actors/></Route>
+                <Route path='/search/:name'><Search/></Route>
                 <BtnUp />
             </Router>
         </div>

@@ -32,11 +32,11 @@ const Actors = () => {
                 {
                     actors.map(el =>
                         <div className="all-actor-box">
-                            <Link to={`/actor-info/${el.id}`}>
+                            <Link key={id} to={`/actor-info/${el.id}`}>
                                 {
                                     el.profile_path === null ?
                                         <img
-                                            src="https://o.remove.bg/downloads/e8ade73f-2117-4dcb-9c56-cf552cbf6c4a/default-user-image-removebg-preview.png"
+                                            src="https://o.remove.bg/downloads/c97812bd-9636-4515-9146-05bf8140bb3d/default-user-image-removebg-preview.png"
                                             alt="" className='user-unk'/>
                                         :
                                         <img

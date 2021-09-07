@@ -12,14 +12,16 @@ const Header = () => {
 
     const btnSearch = () => {
         if (textSearch.trim()) {
-            history.push(`browse/${textSearch}`)
+            history.push(`/search/${textSearch}`)
+            setTimeout(() => setTextSearch(''), 1000)
         }
     }
 
     return (
         <header className="container header">
-            <Link className="logo-title" to ={`/`}>
-                watch with soul
+            <Link className="logo" to={`/`}>
+                <i className='bx bx-film'/>
+                <div className="logo-title">watch with soul</div>
             </Link>
 
             <div className="p">
@@ -28,7 +30,7 @@ const Header = () => {
                 <p>Serials</p>
                 <p>Cartoons</p>
                 <input className='search-input' onKeyDown={e => {if(e.key === "Enter") btnSearch()}} onChange={searchInput} type='text' placeholder='Search...'/>
-                <button className='search-btn' onClick={btnSearch}><i className='bx bx-search'/></button>
+                <button className='search-btn'  onClick={btnSearch}><i className='bx bx-search'/></button>
             </div>
         </header>
     );

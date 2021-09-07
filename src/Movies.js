@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 
-//87ddbf572d37c8c9ab2b83fd928c482c
+
 const Movies = () => {
 
     const [page, setPage] = useState(1)
@@ -48,8 +48,8 @@ const Movies = () => {
                         <div className="box" key={el.id}>
                             <Link to={`/movie-info/${el.id}`}>
                                 <img className="img-movies"
-                                     src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${el.poster_path}`}
-                                     alt=""/>
+                                     src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${el.poster_path}`} alt=""/>
+
                                 <p className="title-movies">{el.title}</p>
                             </Link>
                         </div>

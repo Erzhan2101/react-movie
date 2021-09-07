@@ -79,14 +79,14 @@ const MovieInfo = () => {
             <h4 className="actors-desc">Trailers</h4>
             <div className="grid-3">
                 {
-                    trailers.map(item =>
+                    trailers.slice(trailers, 5).map(item =>
                         <Fancy id={item.key} key={item.id}/>
                     )
                 }
             </div>
             <div className="actors">
                 <h4 className="actors-desc">Starred in the film</h4>
-                <OwlCarousel className='owl-theme' margin={10} items={4}>
+                <OwlCarousel className='owl-theme' margin={20} items={4}>
                     {
                         actors.slice(actors, 10).map(el =>
                             <div className="actor-box">
@@ -94,7 +94,7 @@ const MovieInfo = () => {
                                     {
                                         el.profile_path === null ?
                                             <img
-                                                src="https://o.remove.bg/downloads/e8ade73f-2117-4dcb-9c56-cf552cbf6c4a/default-user-image-removebg-preview.png"
+                                                src="https://o.remove.bg/downloads/c97812bd-9636-4515-9146-05bf8140bb3d/default-user-image-removebg-preview.png"
                                                 alt="" className='img-movies-user'/>
                                             :
                                             <img
