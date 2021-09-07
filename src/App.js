@@ -1,27 +1,31 @@
-import Movies from "./Movies";
-import MovieInfo from "./MovieInfo";
-import Header from "./Header";
-import ActorInfo from "./ActorDetails";
-import Search from "./Search";
-
+import Movies from "./views/Movies/Movies";
+import MovieInfo from "./views/Movie-info/MovieInfo";
+import Header from "./components/header/Header";
+import ActorInfo from "./views/Actor-details/ActorDetails";
+import Search from "./components/search/Search";
+import Footer from "./components/footer/Footer";
 import {BrowserRouter as Router, Route} from "react-router-dom"
-import Actors from "./Actors";
-import BtnUp from "./BtnUp";
+import Actors from "./views/Actors/Actors";
+import BtnUp from "./components/btnUp/BtnUp";
+
 function App() {
 
 
     //87ddbf572d37c8c9ab2b83fd928c482c
     return (
 
-        <div className="container mb-3">
+        <div>
             <Router>
-                <Header />
-                <Route exact path='/'><Movies /></Route>
-                <Route path='/movie-info/:id'><MovieInfo/></Route>
-                <Route path='/actor-info/:id'><ActorInfo/></Route>
-                <Route path='/actors/:id'><Actors/></Route>
-                <Route path='/search/:name'><Search/></Route>
-                <BtnUp />
+                <Header/>
+                <div className="container ">
+                    <Route exact path='/'><Movies/></Route>
+                    <Route path='/movie-info/:id'><MovieInfo/></Route>
+                    <Route path='/actor-info/:id'><ActorInfo/></Route>
+                    <Route path='/actors/:id'><Actors/></Route>
+                    <Route path='/search/:name'><Search/></Route>
+                </div>
+                <BtnUp/>
+                <Footer/>
             </Router>
         </div>
 

@@ -35,9 +35,10 @@ const Actors = () => {
                             <Link key={id} to={`/actor-info/${el.id}`}>
                                 {
                                     el.profile_path === null ?
-                                        <img
-                                            src="https://o.remove.bg/downloads/c97812bd-9636-4515-9146-05bf8140bb3d/default-user-image-removebg-preview.png"
-                                            alt="" className='user-unk'/>
+                                        <i className='bx bxs-user'/>
+                                        // <img
+                                        //     src="https://o.remove.bg/downloads/c97812bd-9636-4515-9146-05bf8140bb3d/default-user-image-removebg-preview.png"
+                                        //     alt="" className='user-unk'/>
                                         :
                                         <img
                                             src={`https://www.themoviedb.org/t/p/w276_and_h350_face/${el.profile_path}`}

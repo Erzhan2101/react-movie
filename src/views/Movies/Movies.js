@@ -49,7 +49,6 @@ const Movies = () => {
                             <Link to={`/movie-info/${el.id}`}>
                                 <img className="img-movies"
                                      src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${el.poster_path}`} alt=""/>
-
                                 <p className="title-movies">{el.title}</p>
                             </Link>
                         </div>

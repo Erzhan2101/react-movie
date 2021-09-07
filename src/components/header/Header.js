@@ -13,12 +13,12 @@ const Header = () => {
     const btnSearch = () => {
         if (textSearch.trim()) {
             history.push(`/search/${textSearch}`)
-            setTimeout(() => setTextSearch(''), 1000)
+            setTimeout(() => setTextSearch(''), 100)
         }
     }
 
     return (
-        <header className="container header">
+        <header className="header">
             <Link className="logo" to={`/`}>
                 <i className='bx bx-film'/>
                 <div className="logo-title">watch with soul</div>

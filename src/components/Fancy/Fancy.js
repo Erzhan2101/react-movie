@@ -6,7 +6,7 @@ const FancyVideo = ({id}) => {
 
                     <div>
                         <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={id} onClose={() => setOpen(false)} />
-                        <button className="btn-primary" onClick={()=> setOpen(true)}>Trailer</button>
+                        <button className="btn-trailer" onClick={()=> setOpen(true)}><i className='bx bxs-right-arrow'/> <span>Play trailer</span></button>
                     </div>
     );
 };

@@ -4,7 +4,7 @@ import {Link, useHistory, useParams} from 'react-router-dom'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import Fancy from "./Fancy";
+import Fancy from "../../components/Fancy/Fancy";
 
 const MovieInfo = () => {
     const [info, setInfo] = useState({})
@@ -72,17 +72,17 @@ const MovieInfo = () => {
                             <p className="info-film-duration">
                                 <span>Film duration: </span> {Math.floor(info.runtime / 60)} hour {Math.floor(info.runtime % 60)} minutes
                             </p>
+                           <div className="trailer">
+                               <p>movie trailer: </p>
+                               {
+                                   trailers.slice(trailers, 1).map(item =>
+                                       <Fancy id={item.key} key={item.id}/>
+                                   )
+                               }
+                           </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <h4 className="actors-desc">Trailers</h4>
-            <div className="grid-3">
-                {
-                    trailers.slice(trailers, 5).map(item =>
-                        <Fancy id={item.key} key={item.id}/>
-                    )
-                }
             </div>
             <div className="actors">
                 <h4 className="actors-desc">Starred in the film</h4>

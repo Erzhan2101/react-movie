@@ -33,7 +33,7 @@ const Search = () => {
             </button>
         </>)
     } else if (film.total_pages === page && page !== 1) {
-        pageButtons = (<button className='pageButton' onClick={() => setPage(page - 1 )}><i
+        pageButtons = (<button className='pageButton' onClick={() => setPage(page - 1)}><i
             className='bx bxs-left-arrow-circle'/></button>)
     }
 
@@ -53,11 +53,16 @@ const Search = () => {
                     film.results.map(el =>
                         <div className="box-search">
                             <Link to={`/movie-info/${el.id}`}>
-                                <img className="img-movies" src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${el.poster_path}`} alt=""/>
+                                {el.poster_path === null ?
+                                    <i className='bx bxs-image'/>
+                                    :
+                                    <img className="img-movies"
+                                         src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${el.poster_path}`}
+                                         alt=""/>
+                                }
                                 <p className="title-movies">{el.title}</p>
                             </Link>
                         </div>
-
                     )
                 }
             </div>

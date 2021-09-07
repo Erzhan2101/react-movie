@@ -18,22 +18,31 @@ div {
   border-radius: 10px;
 }
 
-.grid-3{
+.grid-3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.user-unk {
-  width: 97%;
-  margin: 2px 0 65px;
+
+
+.bxs-user{
+  color: white;
+  text-align: center;
+  font-size: 270px;
+  margin:30px 0 29px;
 }
 
-.no-img{
-  height: 273px;
+
+
+.bxs-image {
+  text-align: center;
+  color: white;
+  font-size: 169px;
+  margin: 48px 0 40px;
 }
 
-.bx-search{
+.bx-search {
   color: #6f6f6f;
 }
 
@@ -74,7 +83,7 @@ a {
   background-color: #6686b6;
 }
 
-.pageButton{
+.pageButton {
   background-color: #225fb3;
   color: white;
   width: 100px;
@@ -84,7 +93,7 @@ a {
   margin-bottom: 20px;
 }
 
-.pageButton:hover{
+.pageButton:hover {
   color: #6f6f6f;
 }
 
@@ -105,9 +114,8 @@ p {
 }
 
 .header {
-  border-radius: 10px;
   background-color: rgba(40, 38, 38, 0.97);
-  padding: 15px 20px;
+  padding: 15px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,6 +154,7 @@ p {
   width: 55%;
   margin-left: 7px;
 }
+
 
 /*========Movies========*/
 
@@ -203,6 +212,33 @@ p {
   display: grid;
   grid-template-columns: 30% 70%;
   padding: 20px 0;
+  font-family: 'Bebas Neue', cursive;
+
+}
+
+.btn-trailer {
+  background: transparent;
+  border: none;
+  transition: .4s;
+  color: white;
+}
+
+.btn-trailer:hover {
+  color: #0a58ca;
+}
+
+
+
+.bxs-right-arrow {
+  margin-right: 20px;
+}
+
+.trailer{
+  display: flex;
+}
+
+.trailer p {
+  color: #0a58ca;
 }
 
 .info-grid img {
@@ -456,7 +492,7 @@ p {
 
 .btn-up {
   position: fixed;
-  bottom: 50px;
+  bottom: 90px;
   right: 28px;
   height: 60px;
   width: 60px;
@@ -474,33 +510,61 @@ p {
 }
 
 
-.search-grid{
+.search-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 10px;
 }
 
-.img-search{
+.img-search {
   width: 200px;
 }
 
-.box-search{
+.box-search {
   padding: 20px;
   border-radius: 10px;
   transition: .3s;
 
 }
 
-.box-search:hover{
+.box-search:hover {
   box-shadow: 1px 1px 16px 5px #0a58ca;
 }
 
-.bx-film{
+.bx-film {
   font-size: 40px;
   color: white;
 }
 
-.logo{
+.logo {
   display: flex;
   width: 20%;
+}
+
+//=========footer========//
+
+.footer {
+  margin-top: 20px;
+  background-color: rgba(40, 38, 38, 0.97);
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: .3s;
+}
+
+.footer:hover {
+  box-shadow: 1px 1px 16px 5px rgba(10, 88, 202, 0.34);
+
+}
+
+
+.icon-contact {
+  color: white;
+  font-size: 23px;
+  margin-left: 20px;
+}
+
+.bxl-facebook-circle {
+  margin-left: 30px;
 }

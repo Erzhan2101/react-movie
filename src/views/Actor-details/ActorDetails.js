@@ -69,7 +69,7 @@ const ActorInfo = () => {
                                         ?
                                         <img alt=""  src={`https://www.themoviedb.org/t/p/w150_and_h225_bestv2${el.poster_path}`}/>
                                         :
-                                        <img className="no-img" alt="" src="https://o.remove.bg/downloads/7fc3cb79-d4bd-4307-9458-d426167fff5c/placeholder-removebg-preview.png"/>
+                                    <i className='bx bxs-image'/>
                                 }
 
                                 </Link>
@@ -82,7 +82,7 @@ const ActorInfo = () => {
                             filmsList.filter(item => item.release_date).sort((a, b) => new Date(b.release_date) - new Date(a.release_date)).map(el =>
                                 <div key={el.id}>
                                     <p className="acting-art-details">{el.release_date.slice(0, 4)}<span> ----- </span>{el.title}
-                                        <span className="acting-art-det">filmed as</span> {el.character}</p>
+                                        <span className="acting-art-det"> filmed as</span> {el.character}</p>
                                 </div>
                             )
                         }
