@@ -93,15 +93,13 @@ const MovieInfo = () => {
                                 <Link to={`/actor-info/${el.id}`}>
                                     {
                                         el.profile_path === null ?
-                                            <img
-                                                src="https://o.remove.bg/downloads/c97812bd-9636-4515-9146-05bf8140bb3d/default-user-image-removebg-preview.png"
-                                                alt="" className='img-movies-user'/>
+                                            <i className='bx bxs-user '/>
                                             :
                                             <img
                                                 src={`https://image.tmdb.org/t/p/w200${el.profile_path}`}
                                                 alt="" className='actor-img'/>
                                     }
-                                    <h4 className="actor-name">{el.name}</h4>
+                                    <h4 className="actor-name ">{el.name}</h4>
                                     <p className="actor-character">{el.character}</p>
                                 </Link>
                             </div>
