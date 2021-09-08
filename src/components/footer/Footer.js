@@ -9,7 +9,7 @@ const Footer = () => {
             </Link>
             <p>© 2021 Erzhan Taalaibekov</p>
             <div>
-                <Link className="icon-contact">
+                <Link hre className="icon-contact">
                     <i className='bx bxl-facebook-circle'/>
                 </Link>
                 <Link className="icon-contact">

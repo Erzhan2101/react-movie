@@ -31,6 +31,7 @@ const Movies = () => {
     }
     return (
         <div className="movies">
+
             <div className="btn-movie-grid">
                 {
                     Array(6).fill(0).map((el, idx) =>

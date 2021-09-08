@@ -13,7 +13,7 @@ const Header = () => {
     const btnSearch = () => {
         if (textSearch.trim()) {
             history.push(`/search/${textSearch}`)
-            setTimeout(() => setTextSearch(''), 100)
+            setTextSearch("")
         }
     }
 
@@ -29,7 +29,7 @@ const Header = () => {
                 <p>Films</p>
                 <p>Serials</p>
                 <p>Cartoons</p>
-                <input className='search-input' onKeyDown={e => {if(e.key === "Enter") btnSearch()}} onChange={searchInput} type='text' placeholder='Search...'/>
+                <input className='search-input' value={textSearch} onKeyDown={e => {if(e.key === "Enter") btnSearch()}} onChange={searchInput} type='text' placeholder='Search...'/>
                 <button className='search-btn'  onClick={btnSearch}><i className='bx bx-search'/></button>
             </div>
         </header>

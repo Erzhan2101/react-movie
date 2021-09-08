@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {Link, useParams} from "react-router-dom";
+import {Link, useHistory, useParams} from "react-router-dom";
 import axios from "axios";
 
 const Search = () => {
@@ -8,6 +8,7 @@ const Search = () => {
     const [film, setFilm] = useState({})
     const [page, setPage] = useState(1)
     const [inLoading, setIsLoading] = useState(true)
+    const history = useHistory();
 
 
     useEffect(() => {
@@ -45,12 +46,11 @@ const Search = () => {
     }
     return (
         <div className='movies'>
-            <div>
-                {pageButtons}
-            </div>
+            <button className="back" onClick={() => history.goBack()}>Back</button>
+            <div className="page-btn">{pageButtons}</div>
             <div className="search-grid">
                 {
-                    film.results.map(el =>
+                    film?.results?.length ? film?.results?.map(el =>
                         <div className="box-search">
                             <Link to={`/movie-info/${el.id}`}>
                                 {el.poster_path === null ?
@@ -63,7 +63,7 @@ const Search = () => {
                                 <p className="title-movies">{el.title}</p>
                             </Link>
                         </div>
-                    )
+                    ) : <h2 className="not-found">MOVIE NOT FOUND</h2>
                 }
             </div>
         </div>

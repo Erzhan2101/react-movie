@@ -14,7 +14,7 @@ function App() {
     //87ddbf572d37c8c9ab2b83fd928c482c
     return (
 
-        <div>
+
             <Router>
                 <Header/>
                 <div className="container ">
@@ -27,7 +27,7 @@ function App() {
                 <BtnUp/>
                 <Footer/>
             </Router>
-        </div>
+
 
     );
 }
