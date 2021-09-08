@@ -1,0 +1,100 @@
+@media (max-width: 480px) {
+    .header {
+        width: 141%;
+        justify-content: unset;
+        align-items: unset;
+        padding: 8px 0;
+    }
+
+    .logo-title {
+        display: none;
+    }
+
+    .p {
+        margin: 8px 0 8px 80px;
+    }
+
+    .search-input {
+        width: 112px;
+    }
+
+    .grid {
+        display: unset;
+    }
+
+    .movies {
+        width: 145%;
+    }
+
+    .btn-up {
+        right: 22px;
+        height: 45px;
+        width: 45px;
+    }
+
+    .icon-contact {
+        display: none;
+    }
+
+    .footer{
+        width: 141%;
+    }
+
+    .info {
+        width: 145%;
+    }
+
+    .info-grid {
+        display: unset;
+    }
+
+    .info-grid img {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .grid-2 {
+        display: unset;
+    }
+
+    .look-beyond {
+        margin-top: 73px;
+    }
+
+    .actors-all{
+        display: unset;
+        width: 145%;
+    }
+
+    .bxs-user{
+        margin: 30px 64px 29px;
+    }
+
+    .details-actor{
+        width: 145%;
+    }
+
+    .bxs-image {
+        font-size: 92px;
+        margin: 31px 0 40px;}
+
+    .owl-carousel {
+        display: none;
+        width: 102%;}
+
+    .all-actors{
+        width: 145%;
+    }
+
+    .all-actor-img {
+        width: 100%;}
+    .search-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bxs-image {
+        margin: 32px 26px 40px;}
+    .not-found {
+        height: 247px;
+        width: 100%;}
+}
