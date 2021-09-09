@@ -25,10 +25,7 @@ const Header = () => {
             </Link>
 
             <div className="p">
-                <p>Home</p>
-                <p>Films</p>
-                <p>Serials</p>
-                <p>Cartoons</p>
+                <Link to="/" className="nav">Home</Link>
                 <input className='search-input' value={textSearch} onKeyDown={e => {if(e.key === "Enter") btnSearch()}} onChange={searchInput} type='text' placeholder='Search...'/>
                 <button className='search-btn'  onClick={btnSearch}><i className='bx bx-search'/></button>
             </div>
