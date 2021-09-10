@@ -10,8 +10,12 @@
         display: none;
     }
 
+    ..bx-film{
+        margin-left: 7px;
+    }
+
     .p {
-        margin: 8px 0 8px 170px;
+        margin: 8px 0 8px 280px;
     }
 
     .search-input {
