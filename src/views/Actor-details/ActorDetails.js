@@ -69,7 +69,7 @@ const ActorInfo = () => {
                                         ?
                                         <img alt=""  src={`https://www.themoviedb.org/t/p/w150_and_h225_bestv2${el.poster_path}`}/>
                                         :
-                                    <i className='bx bxs-image'/>
+                                    <i className='bx bxs-image no-img'/>
                                 }
 
                                 </Link>

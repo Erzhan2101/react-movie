@@ -11,11 +11,15 @@
     }
 
     .p {
-        margin: 8px 0 8px 80px;
+        margin: 8px 0 8px 170px;
     }
 
     .search-input {
         width: 112px;
+    }
+
+    .box-search{
+        text-align: center;
     }
 
     .grid {
@@ -24,12 +28,18 @@
 
     .movies {
         width: 145%;
+        /*height: 102vh;*/
+    }
+
+
+    .all-actor-box{
+        text-align: center;
     }
 
     .btn-up {
         right: 22px;
-        height: 45px;
-        width: 45px;
+        height: 60px;
+        width: 60px;
     }
 
     .icon-contact {
@@ -73,10 +83,11 @@
     .details-actor{
         width: 145%;
     }
-
     .bxs-image {
-        font-size: 92px;
-        margin: 31px 0 40px;}
+        font-size: 90px;
+        text-align: center;
+        margin: 60px 0 80px;
+    }
 
     .owl-carousel {
         display: none;
@@ -92,8 +103,11 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .bxs-image {
-        margin: 32px 26px 40px;}
+
+    .no-img{
+        margin: 34px 0 16px;
+    }
+
     .not-found {
         height: 247px;
         width: 100%;}

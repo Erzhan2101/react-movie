@@ -54,14 +54,14 @@ const Search = () => {
                         <div className="box-search">
                             <Link to={`/movie-info/${el.id}`}>
                                 {el.poster_path === null ?
-                                    <i className='bx bxs-image'/>
+                                    <i className='bx bxs-image '/>
                                     :
                                     <img className="img-movies"
                                          src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${el.poster_path}`}
                                          alt=""/>
                                 }
-                                <p className="title-movies">{el.title}</p>
                             </Link>
+                            <p className="title-movies">{el.title}</p>
                         </div>
                     ) : <h2 className="not-found">MOVIE NOT FOUND</h2>
                 }
